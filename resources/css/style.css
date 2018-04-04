@@ -49,17 +49,16 @@ header .logo {
 
 /* BANNER */
 .banner {
-  /* display: block; */
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
   height: 25rem;
-  color: white;
+
 }
 
 .text-box {
+  color: white;
   width: 20rem;
   background-color: black;
   top: 9rem;
@@ -81,21 +80,32 @@ header .logo {
 
 
 /* NAV BAR */
-.nav-bar {
+.nav-bar, .mobile-nav {
+  display: block;
   background-color: firebrick;
   width: 100%;
   padding: .75rem 0;
+  display: block;
+  text-align: center;
 }
 
-nav.container {
+
+.nav-bar nav.container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav nav.container {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 
 /* CONTENT */
@@ -104,6 +114,7 @@ nav a {
   display: flex;
   background-color: white;
   justify-content: space-between;
+  align-items: center;
   margin: 3rem 0 0 0;
 
 }
@@ -111,7 +122,6 @@ nav a {
 
   .item {
     width: 30%;
-
   }
 
   .product-image {
@@ -154,7 +164,6 @@ nav a {
     left: 2rem;
     padding: 1rem 2rem;
 
-
   }
 
 
@@ -170,6 +179,11 @@ footer {
 
 }
 
+@media only screen and (min-width: 1025px) {
+  .mobile-nav {
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   .item {
@@ -180,4 +194,69 @@ footer {
     display: none;
   }
 
+  .nav-bar {
+    display: none;
+  }
+
+  .info {
+    width: 35%;
+  }
+
+}
+
+
+@media only screen and (max-width: 470px) {
+  .text-box {
+    color: white;
+    width: 100%;
+    top: 10rem;
+  }
+
+  .banner {
+    display: block;
+    height: 15rem;
+    margin: 0;
+  }
+
+  .text-box h1 {
+    font-size: 1rem;
+    left: 0;
+  }
+
+  .text-box p {
+    font-size: .77rem;
+    top: 1rem;
+  }
+
+  .mobile-nav {
+    background-color: blue;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .item {
+    width: 90%;
+  }
+
+  .watch {
+    display: none;
+  }
+
+  .pen {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .info {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
