@@ -1,11 +1,5 @@
-div {
-  border: 1px solid gray;
-}
-
-
-html,
-body {
-  background-color: black;
+html, body {
+  background-color: white;
   color: white;
   font-size: 18px;
   font-family: "Helvetica";
@@ -14,20 +8,21 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto;
-  border: 1px solid blue;
 }
 
+
+/*  LOGO HEADER  */
 
 header {
   display: block;
   color: white;
-  /* height: 50px; */
+  padding: 0.66rem 0;
   width: 100%;
   top: 0;
-  position: fixed;
-  z-index: 1;
+  /* position: fixed; */
+  /* z-index: 1; */
   background-color: black;
 
 }
@@ -36,7 +31,7 @@ header .logo {
   display: flex;
   align-items: center;
   left: 5%;
-  margin: 0.66rem 0;
+  /* margin: 0.66rem 0; */
   font-size: 1rem;
 }
 
@@ -48,44 +43,137 @@ header .logo {
 
 
 .main {
-  /* width: 960px; */
-  padding-top: 50px;
+  /* padding-top: 50px; */
 
 }
 
+/* BANNER */
 .banner {
+  /* display: block; */
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100%;
-  overflow: visible;
   height: 25rem;
   color: white;
 }
 
-.banner .text-box {
-  /* height: 100px; */
+.text-box {
   width: 20rem;
   background-color: black;
-  margin-top: 9rem;
+  top: 9rem;
   padding: 2rem 3rem;
-  text-align: left;
+  position: relative;
 }
 
 .text-box h1 {
   font-size: 2rem;
   font-weight: bold;
+  margin-top: .25rem;
 }
 
+.text-box p {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Helvetica";
+}
+
+
+/* NAV BAR */
 .nav-bar {
   background-color: firebrick;
   width: 100%;
+  padding: .75rem 0;
 }
 
 nav.container {
-  margin: 0.75rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* CONTENT */
+
+.products, .contact {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  margin: 3rem 0 0 0;
+
+}
+
+
+  .item {
+    width: 30%;
+
+  }
+
+  .product-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+    height: 9rem;
+    padding: 2rem 0;
+  }
+
+  .product-image img {
+    max-width: 8rem;
+  }
+
+
+  .item p {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: black;
+    text-align: center;
+
+  }
+
+
+  .info {
+    width: 35%;
+    /* display: block; */
+  }
+
+  .info p {
+    /* display: block; */
+    color: black;
+    /* width: 100%; */
+  }
+
+  .info h4 {
+    display: block;
+    background-color: black;
+    left: 2rem;
+    padding: 1rem 2rem;
+
+
+  }
+
+
+/* FOOTER */
+
 footer {
+  display: block;
+  background-color: black;
+  padding: 5rem 0;
+  width: 100%;
+  color: white;
+  margin-top: 4em;
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .item {
+    width: 47%;
+  }
 
 }
